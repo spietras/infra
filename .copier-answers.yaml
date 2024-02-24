@@ -1,0 +1,11 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: 0.4.0
+_src_path: gh:quickplates/generic
+accountname: spietras
+description: Terraform resources for my infrastructure 🌎
+docs: true
+docsurl: https://spietras.github.io/infra
+projectname: infra
+releases: false
+reponame: infra
+repourl: https://github.com/spietras/infra
