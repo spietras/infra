@@ -14,6 +14,14 @@ concurrency:
   push:
     branches:
       - main
+    # Run only on changes to relevant files
+    paths:
+      - .github/workflows/apply.yaml
+      - src/**
+      - .sops.yaml
+      - flake.lock
+      - "*.nix"
+      - Taskfile.dist.yaml
 
 jobs:
   apply:

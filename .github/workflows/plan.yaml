@@ -8,6 +8,14 @@ name: Plan
   pull_request:
     branches:
       - main
+    # Run only on changes to relevant files
+    paths:
+      - .github/workflows/plan.yaml
+      - src/**
+      - .sops.yaml
+      - flake.lock
+      - "*.nix"
+      - Taskfile.dist.yaml
 
 jobs:
   plan:
