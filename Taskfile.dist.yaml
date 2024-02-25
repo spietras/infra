@@ -137,21 +137,10 @@ tasks:
         -chdir=src/
         init
         {{ .CLI_ARGS }}
-  init-internal:
-    desc: Initialize Terraform quietly
-    internal: true
-    env:
-      TF_IN_AUTOMATION: "true"
-    cmds:
-      - task: init
-        vars:
-          CLI_ARGS: >
-            -input=false
   plan:
     desc: Create an execution plan
     interactive: true
     cmds:
-      - task: init-internal
       - >
         terraform
         -chdir=src/
@@ -161,7 +150,6 @@ tasks:
     desc: Apply changes
     interactive: true
     cmds:
-      - task: init-internal
       - >
         terraform
         -chdir=src/
