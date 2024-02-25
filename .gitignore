@@ -16,3 +16,6 @@
 # Terraform state
 *.tfstate
 *.tfstate.*
+
+# Terraform backend configuration
+*.tfbackend
