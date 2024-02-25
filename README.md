@@ -2,7 +2,7 @@
 
 <div align="center">
 
-Terraform resources for my infrastructure 🌎
+Terraform resources for my cloud infrastructure 🌎
 
 [![Lint](https://github.com/spietras/infra/actions/workflows/lint.yaml/badge.svg)](https://github.com/spietras/infra/actions/workflows/lint.yaml)
 [![Apply](https://github.com/spietras/infra/actions/workflows/apply.yaml/badge.svg)](https://github.com/spietras/infra/actions/workflows/apply.yaml)
@@ -15,7 +15,7 @@ Terraform resources for my infrastructure 🌎
 ## 💡 About
 
 This repository contains [`Terraform`](https://www.terraform.io)
-resources for infrastructure used in my homelab.
+resources for my infrastructure in the cloud.
 
 ## 📄 Further Reading
 
