@@ -550,7 +550,7 @@ resource "cloudflare_record" "kubernetes" {
   type = "A"
 
   # IP address of Kubernetes
-  value = "100.106.61.38"
+  value = "100.68.40.107"
 
   # Identifier of the zone to add the record to
   zone_id = cloudflare_zone.main.id
@@ -571,7 +571,7 @@ resource "cloudflare_record" "kubernetes_wildcard" {
   type = "A"
 
   # IP address of Kubernetes
-  value = "100.106.61.38"
+  value = "100.68.40.107"
 
   # Identifier of the zone to add the record to
   zone_id = cloudflare_zone.main.id
