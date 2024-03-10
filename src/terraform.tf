@@ -24,7 +24,7 @@ terraform {
     # Cloudflare provider used to interact with Cloudflare API
     cloudflare = {
       source  = "cloudflare/cloudflare"
-      version = "~> 4.0"
+      version = "~> 4.26"
     }
 
     # SOPS provider used to decrypt secrets
