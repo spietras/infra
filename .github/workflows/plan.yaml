@@ -29,7 +29,7 @@ jobs:
       name: main
     env:
       NIX_CACHE_DIR: /home/runner/.nixcache/
-      TERRAFORM_BACKEND_CONFIG: /home/runner/config.s3.tfbackend
+      TERRAFORM_BACKEND_CONFIG: /home/runner/config.tfbackend
       TERRAFORM_CACHE_DIR: /home/runner/.terraformcache/
     permissions:
       # Needed to checkout code
@@ -81,7 +81,6 @@ jobs:
         env:
           SOPS_AGE_KEY: ${{ secrets.SOPS_AGE_KEY }}
           TF_PLUGIN_CACHE_DIR: ${{ env.TERRAFORM_CACHE_DIR }}
-        # yamllint disable rule:line-length
         run: >
           nix
           develop
@@ -93,7 +92,6 @@ jobs:
           --
           -input=false
           -backend-config=${{ env.TERRAFORM_BACKEND_CONFIG }}
-      # yamllint enable rule:line-length
       - name: Plan
         env:
           SOPS_AGE_KEY: ${{ secrets.SOPS_AGE_KEY }}
