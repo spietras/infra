@@ -12,8 +12,8 @@ resource "cloudflare_record" "protonmail_verification" {
   # This is a TXT record
   type = "TXT"
 
-  # Value of the record
-  value = "protonmail-verification=${var.secrets.dns.protonmail.challenge}"
+  # Content of the record
+  content = "protonmail-verification=${var.secrets.dns.protonmail.challenge}"
 
   # Identifier of the zone to add the record to
   zone_id = cloudflare_zone.main.id
@@ -36,8 +36,8 @@ resource "cloudflare_record" "protonmail_mail_1" {
   # This is an MX record
   type = "MX"
 
-  # Value of the record
-  value = "mail.protonmail.ch"
+  # Content of the record
+  content = "mail.protonmail.ch"
 
   # Identifier of the zone to add the record to
   zone_id = cloudflare_zone.main.id
@@ -60,8 +60,8 @@ resource "cloudflare_record" "protonmail_mail_2" {
   # This is an MX record
   type = "MX"
 
-  # Value of the record
-  value = "mailsec.protonmail.ch"
+  # Content of the record
+  content = "mailsec.protonmail.ch"
 
   # Identifier of the zone to add the record to
   zone_id = cloudflare_zone.main.id
@@ -81,8 +81,8 @@ resource "cloudflare_record" "protonmail_spf" {
   # This is a TXT record
   type = "TXT"
 
-  # Value of the record
-  value = "v=spf1 include:_spf.protonmail.ch ~all"
+  # Content of the record
+  content = "v=spf1 include:_spf.protonmail.ch ~all"
 
   # Identifier of the zone to add the record to
   zone_id = cloudflare_zone.main.id
@@ -102,8 +102,8 @@ resource "cloudflare_record" "protonmail_dkim_1" {
   # This is a CNAME record
   type = "CNAME"
 
-  # Value of the record
-  value = "protonmail.${var.secrets.dns.protonmail.dkim.domain}"
+  # Content of the record
+  content = "protonmail.${var.secrets.dns.protonmail.dkim.domain}"
 
   # Identifier of the zone to add the record to
   zone_id = cloudflare_zone.main.id
@@ -123,8 +123,8 @@ resource "cloudflare_record" "protonmail_dkim_2" {
   # This is a CNAME record
   type = "CNAME"
 
-  # Value of the record
-  value = "protonmail2.${var.secrets.dns.protonmail.dkim.domain}"
+  # Content of the record
+  content = "protonmail2.${var.secrets.dns.protonmail.dkim.domain}"
 
   # Identifier of the zone to add the record to
   zone_id = cloudflare_zone.main.id
@@ -144,8 +144,8 @@ resource "cloudflare_record" "protonmail_dkim_3" {
   # This is a CNAME record
   type = "CNAME"
 
-  # Value of the record
-  value = "protonmail3.${var.secrets.dns.protonmail.dkim.domain}"
+  # Content of the record
+  content = "protonmail3.${var.secrets.dns.protonmail.dkim.domain}"
 
   # Identifier of the zone to add the record to
   zone_id = cloudflare_zone.main.id
@@ -165,8 +165,8 @@ resource "cloudflare_record" "protonmail_dmarc" {
   # This is a TXT record
   type = "TXT"
 
-  # Value of the record
-  value = "v=DMARC1; p=quarantine;"
+  # Content of the record
+  content = "v=DMARC1; p=quarantine;"
 
   # Identifier of the zone to add the record to
   zone_id = cloudflare_zone.main.id
@@ -186,8 +186,8 @@ resource "cloudflare_record" "simplelogin_verification" {
   # This is a TXT record
   type = "TXT"
 
-  # Value of the record
-  value = "sl-verification=${var.secrets.dns.simplelogin.challenge}"
+  # Content of the record
+  content = "sl-verification=${var.secrets.dns.simplelogin.challenge}"
 
   # Identifier of the zone to add the record to
   zone_id = cloudflare_zone.main.id
@@ -210,8 +210,8 @@ resource "cloudflare_record" "simplelogin_mail_1" {
   # This is an MX record
   type = "MX"
 
-  # Value of the record
-  value = "mx1.simplelogin.co"
+  # Content of the record
+  content = "mx1.simplelogin.co"
 
   # Identifier of the zone to add the record to
   zone_id = cloudflare_zone.main.id
@@ -234,8 +234,8 @@ resource "cloudflare_record" "simplelogin_mail_2" {
   # This is an MX record
   type = "MX"
 
-  # Value of the record
-  value = "mx2.simplelogin.co"
+  # Content of the record
+  content = "mx2.simplelogin.co"
 
   # Identifier of the zone to add the record to
   zone_id = cloudflare_zone.main.id
@@ -255,8 +255,8 @@ resource "cloudflare_record" "simplelogin_spf" {
   # This is a TXT record
   type = "TXT"
 
-  # Value of the record
-  value = "v=spf1 include:simplelogin.co ~all"
+  # Content of the record
+  content = "v=spf1 include:simplelogin.co ~all"
 
   # Identifier of the zone to add the record to
   zone_id = cloudflare_zone.main.id
@@ -276,8 +276,8 @@ resource "cloudflare_record" "simplelogin_dkim_1" {
   # This is a CNAME record
   type = "CNAME"
 
-  # Value of the record
-  value = "dkim._domainkey.simplelogin.co"
+  # Content of the record
+  content = "dkim._domainkey.simplelogin.co"
 
   # Identifier of the zone to add the record to
   zone_id = cloudflare_zone.main.id
@@ -297,8 +297,8 @@ resource "cloudflare_record" "simplelogin_dkim_2" {
   # This is a CNAME record
   type = "CNAME"
 
-  # Value of the record
-  value = "dkim02._domainkey.simplelogin.co"
+  # Content of the record
+  content = "dkim02._domainkey.simplelogin.co"
 
   # Identifier of the zone to add the record to
   zone_id = cloudflare_zone.main.id
@@ -318,8 +318,8 @@ resource "cloudflare_record" "simplelogin_dkim_3" {
   # This is a CNAME record
   type = "CNAME"
 
-  # Value of the record
-  value = "dkim03._domainkey.simplelogin.co"
+  # Content of the record
+  content = "dkim03._domainkey.simplelogin.co"
 
   # Identifier of the zone to add the record to
   zone_id = cloudflare_zone.main.id
@@ -339,8 +339,8 @@ resource "cloudflare_record" "simplelogin_dmarc" {
   # This is a TXT record
   type = "TXT"
 
-  # Value of the record
-  value = "v=DMARC1; p=quarantine; pct=100; adkim=s; aspf=s;"
+  # Content of the record
+  content = "v=DMARC1; p=quarantine; pct=100; adkim=s; aspf=s;"
 
   # Identifier of the zone to add the record to
   zone_id = cloudflare_zone.main.id
@@ -360,8 +360,8 @@ resource "cloudflare_record" "github_pages_verification" {
   # This is a TXT record
   type = "TXT"
 
-  # Value of the record
-  value = var.secrets.dns.github.pages.challenge
+  # Content of the record
+  content = var.secrets.dns.github.pages.challenge
 
   # Identifier of the zone to add the record to
   zone_id = cloudflare_zone.main.id
@@ -382,7 +382,7 @@ resource "cloudflare_record" "root" {
   type = "A"
 
   # This results in Cloudflare handling the traffic
-  value = "192.0.2.1"
+  content = "192.0.2.1"
 
   # Identifier of the zone to add the record to
   zone_id = cloudflare_zone.main.id
@@ -402,8 +402,8 @@ resource "cloudflare_record" "tunnel" {
   # This is a CNAME record
   type = "CNAME"
 
-  # Value of the record
-  value = cloudflare_tunnel.main.cname
+  # Content of the record
+  content = "${cloudflare_zero_trust_tunnel_cloudflared.main.id}.cfargotunnel.com"
 
   # Identifier of the zone to add the record to
   zone_id = cloudflare_zone.main.id
@@ -424,7 +424,7 @@ resource "cloudflare_record" "xenon" {
   type = "A"
 
   # IP address of Xenon in Tailscale
-  value = "100.127.131.11"
+  content = "100.127.131.11"
 
   # Identifier of the zone to add the record to
   zone_id = cloudflare_zone.main.id
@@ -445,7 +445,7 @@ resource "cloudflare_record" "xenon_wildcard" {
   type = "A"
 
   # IP address of Xenon in Tailscale
-  value = "100.127.131.11"
+  content = "100.127.131.11"
 
   # Identifier of the zone to add the record to
   zone_id = cloudflare_zone.main.id
@@ -466,7 +466,7 @@ resource "cloudflare_record" "oxygen" {
   type = "A"
 
   # IP address of Oxygen in Tailscale
-  value = "100.119.51.47"
+  content = "100.119.51.47"
 
   # Identifier of the zone to add the record to
   zone_id = cloudflare_zone.main.id
@@ -487,7 +487,7 @@ resource "cloudflare_record" "oxygen_wildcard" {
   type = "A"
 
   # IP address of Oxygen in Tailscale
-  value = "100.119.51.47"
+  content = "100.119.51.47"
 
   # Identifier of the zone to add the record to
   zone_id = cloudflare_zone.main.id
@@ -508,7 +508,7 @@ resource "cloudflare_record" "carbon" {
   type = "A"
 
   # IP address of Carbon in Tailscale
-  value = "100.86.6.103"
+  content = "100.86.6.103"
 
   # Identifier of the zone to add the record to
   zone_id = cloudflare_zone.main.id
@@ -529,7 +529,7 @@ resource "cloudflare_record" "carbon_wildcard" {
   type = "A"
 
   # IP address of Carbon in Tailscale
-  value = "100.86.6.103"
+  content = "100.86.6.103"
 
   # Identifier of the zone to add the record to
   zone_id = cloudflare_zone.main.id
@@ -550,7 +550,7 @@ resource "cloudflare_record" "kubernetes" {
   type = "A"
 
   # IP address of Kubernetes
-  value = "100.68.95.94"
+  content = "100.68.95.94"
 
   # Identifier of the zone to add the record to
   zone_id = cloudflare_zone.main.id
@@ -571,7 +571,7 @@ resource "cloudflare_record" "kubernetes_wildcard" {
   type = "A"
 
   # IP address of Kubernetes
-  value = "100.68.95.94"
+  content = "100.68.95.94"
 
   # Identifier of the zone to add the record to
   zone_id = cloudflare_zone.main.id
