@@ -43,6 +43,9 @@ resource "cloudflare_ruleset" "redirect_root" {
 
     # Use the rule on requests to spietras.dev
     expression = "(http.host eq \"${local.domains.root}\")"
+
+    # Rule reference
+    ref = "redirect-root"
   }
 
   # Identifier of the zone to apply the ruleset to

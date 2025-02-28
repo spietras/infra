@@ -1,5 +1,5 @@
 # Add main tunnel
-resource "cloudflare_tunnel" "main" {
+resource "cloudflare_zero_trust_tunnel_cloudflared" "main" {
   # Identifier of the account to add the tunnel to
   account_id = cloudflare_account.main.id
 
