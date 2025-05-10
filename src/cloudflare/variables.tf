@@ -28,8 +28,10 @@ variable "secrets" {
       })
     })
 
-    tunnel = object({
-      token = string
+    tunnels = object({
+      demo = object({
+        secret = string
+      })
     })
   })
 }

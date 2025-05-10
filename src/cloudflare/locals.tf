@@ -24,8 +24,10 @@ locals {
       # Subdomain for Tailscale
       tailscale = "ts"
 
-      # Subdomain for the main tunnel
-      tunnel = "demo"
+      tunnels = {
+        # Subdomain for demo tunnel
+        demo = "demo"
+      }
     }
   }
 

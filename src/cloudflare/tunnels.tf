@@ -1,11 +1,11 @@
-# Add main tunnel
-resource "cloudflare_zero_trust_tunnel_cloudflared" "main" {
+# Add demo tunnel
+resource "cloudflare_zero_trust_tunnel_cloudflared" "demo" {
   # Identifier of the account to add the tunnel to
   account_id = cloudflare_account.main.id
 
   # Name of the tunnel
-  name = "tunnel"
+  name = "demo"
 
-  # Password for the tunnel
-  secret = var.secrets.tunnel.token
+  # Secret for the tunnel
+  secret = var.secrets.tunnels.demo.secret
 }

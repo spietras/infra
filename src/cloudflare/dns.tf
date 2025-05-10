@@ -388,13 +388,13 @@ resource "cloudflare_record" "root" {
   zone_id = cloudflare_zone.main.id
 }
 
-# Add record for tunnel
-resource "cloudflare_record" "tunnel" {
+# Add record for demo tunnel
+resource "cloudflare_record" "demo" {
   # Add a comment to the record
-  comment = "This record is used to point to a tunnel"
+  comment = "This record is used to point to the demo tunnel"
 
   # Use this subdomain
-  name = local.domains.subdomains.tunnel
+  name = local.domains.subdomains.tunnels.demo
 
   # Proxy through Cloudflare
   proxied = true
@@ -403,7 +403,7 @@ resource "cloudflare_record" "tunnel" {
   type = "CNAME"
 
   # Content of the record
-  content = "${cloudflare_zero_trust_tunnel_cloudflared.main.id}.cfargotunnel.com"
+  content = "${cloudflare_zero_trust_tunnel_cloudflared.demo.id}.cfargotunnel.com"
 
   # Identifier of the zone to add the record to
   zone_id = cloudflare_zone.main.id
