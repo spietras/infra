@@ -451,13 +451,13 @@ resource "cloudflare_record" "xenon_wildcard" {
   zone_id = cloudflare_zone.main.id
 }
 
-# Add record for Oxygen in Tailscale
-resource "cloudflare_record" "oxygen" {
+# Add record for Neon in Tailscale
+resource "cloudflare_record" "neon" {
   # Add a comment to the record
-  comment = "This record is used to point to Oxygen in Tailscale"
+  comment = "This record is used to point to Neon in Tailscale"
 
   # Use this subdomain
-  name = "oxygen.${local.domains.subdomains.tailscale}"
+  name = "neon.${local.domains.subdomains.tailscale}"
 
   # Don't proxy through Cloudflare
   proxied = false
@@ -465,20 +465,20 @@ resource "cloudflare_record" "oxygen" {
   # This is an A record
   type = "A"
 
-  # IP address of Oxygen in Tailscale
-  content = "100.119.51.47"
+  # IP address of Neon in Tailscale
+  content = "100.125.57.103"
 
   # Identifier of the zone to add the record to
   zone_id = cloudflare_zone.main.id
 }
 
-# Add record for Oxygen wildcard in Tailscale
-resource "cloudflare_record" "oxygen_wildcard" {
+# Add record for Neon wildcard in Tailscale
+resource "cloudflare_record" "neon_wildcard" {
   # Add a comment to the record
-  comment = "This record is used to point to Oxygen wildcard in Tailscale"
+  comment = "This record is used to point to Neon wildcard in Tailscale"
 
   # Use this subdomain
-  name = "*.oxygen.${local.domains.subdomains.tailscale}"
+  name = "*.neon.${local.domains.subdomains.tailscale}"
 
   # Don't proxy through Cloudflare
   proxied = false
@@ -486,8 +486,8 @@ resource "cloudflare_record" "oxygen_wildcard" {
   # This is an A record
   type = "A"
 
-  # IP address of Oxygen in Tailscale
-  content = "100.119.51.47"
+  # IP address of Neon in Tailscale
+  content = "100.125.57.103"
 
   # Identifier of the zone to add the record to
   zone_id = cloudflare_zone.main.id
