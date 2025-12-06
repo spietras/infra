@@ -1,12 +1,11 @@
 # Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
-_commit: 0.3.0
+_commit: 0.5.0
 _src_path: gh:quickplates/terraform
 accountname: spietras
 backend: r2
 bucket: terraform
 description: Terraform resources for my cloud infrastructure 🌎
-docs: true
-docsurl: https://spietras.github.io/infra
+docs: false
 projectname: infra
 region: eeur
 reponame: infra
