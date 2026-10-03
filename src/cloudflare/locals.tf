@@ -33,18 +33,14 @@ locals {
 
   # Map of role names to role IDs
   roles = {
-    for role in data.cloudflare_account_roles.account_roles.roles : role.name => role.id
+    for role in data.cloudflare_account_roles.account_roles.result : role.name => role.id
   }
 
-  # Maps of permission group names to permission group IDs
+  # Map of permission group names to permission group IDs
   permissions = {
-    # Account-level permissions
-    account = data.cloudflare_api_token_permission_groups.permission_groups.account
-
-    # User-level permissions
-    user = data.cloudflare_api_token_permission_groups.permission_groups.user
-
-    # Zone-level permissions
-    zone = data.cloudflare_api_token_permission_groups.permission_groups.zone
+    # Zone permissions
+    zone = {
+      for permission in data.cloudflare_api_token_permission_groups_list.zone_permission_groups.result : permission.name => permission.id
+    }
   }
 }

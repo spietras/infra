@@ -1,13 +1,12 @@
 # Add main zone
 resource "cloudflare_zone" "main" {
-  # Identifier of the account to add the zone to
-  account_id = cloudflare_account.main.id
-
-  # Use the free plan
-  plan = "free"
+  account = {
+    # Identifier of the account to add the zone to
+    id = cloudflare_account.main.id
+  }
 
   # Domain of the zone
-  zone = local.domains.root
+  name = local.domains.root
 }
 
 # Add DNSSEC to the zone

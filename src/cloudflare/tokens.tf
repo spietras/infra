@@ -4,19 +4,28 @@ resource "cloudflare_api_token" "dns" {
   name = "dns"
 
   # Policy for the token
-  policy {
-    permission_groups = [
-      # Write access to DNS records
-      local.permissions.zone["DNS Write"],
+  policies = [
+    {
+      # Allow operations specified in the permission groups
+      effect = "allow"
 
-      # Read access to zone settings
-      local.permissions.zone["Zone Read"],
-    ]
+      # Policy permission groups
+      permission_groups = [
+        {
+          # Write access to DNS records
+          id = local.permissions.zone["DNS Write"]
+        },
+        {
+          # Read access to zone settings
+          id = local.permissions.zone["Zone Read"]
+        }
+      ]
 
-    # Resources the token has access to
-    resources = {
-      # Grant access to all resources in all zones
-      "com.cloudflare.api.account.zone.*" = "*"
+      # Resources the token has access to
+      resources = jsonencode({
+        # Grant access to all resources in all zones
+        "com.cloudflare.api.account.zone.*" = "*"
+      })
     }
-  }
+  ]
 }
