@@ -22,11 +22,6 @@ resource "cloudflare_dns_record" "protonmail_verification" {
   zone_id = cloudflare_zone.main.id
 }
 
-moved {
-  from = cloudflare_record.protonmail_verification
-  to   = cloudflare_dns_record.protonmail_verification
-}
-
 # Add record for mail server for ProtonMail (1)
 resource "cloudflare_dns_record" "protonmail_mail_1" {
   # Add a comment to the record
@@ -52,11 +47,6 @@ resource "cloudflare_dns_record" "protonmail_mail_1" {
 
   # Identifier of the zone to add the record to
   zone_id = cloudflare_zone.main.id
-}
-
-moved {
-  from = cloudflare_record.protonmail_mail_1
-  to   = cloudflare_dns_record.protonmail_mail_1
 }
 
 # Add record for mail server for ProtonMail (2)
@@ -86,11 +76,6 @@ resource "cloudflare_dns_record" "protonmail_mail_2" {
   zone_id = cloudflare_zone.main.id
 }
 
-moved {
-  from = cloudflare_record.protonmail_mail_2
-  to   = cloudflare_dns_record.protonmail_mail_2
-}
-
 # Add record for SPF policy for ProtonMail
 resource "cloudflare_dns_record" "protonmail_spf" {
   # Add a comment to the record
@@ -113,11 +98,6 @@ resource "cloudflare_dns_record" "protonmail_spf" {
 
   # Identifier of the zone to add the record to
   zone_id = cloudflare_zone.main.id
-}
-
-moved {
-  from = cloudflare_record.protonmail_spf
-  to   = cloudflare_dns_record.protonmail_spf
 }
 
 # Add record for DKIM policy for ProtonMail (1)
@@ -144,11 +124,6 @@ resource "cloudflare_dns_record" "protonmail_dkim_1" {
   zone_id = cloudflare_zone.main.id
 }
 
-moved {
-  from = cloudflare_record.protonmail_dkim_1
-  to   = cloudflare_dns_record.protonmail_dkim_1
-}
-
 # Add record for DKIM policy for ProtonMail (2)
 resource "cloudflare_dns_record" "protonmail_dkim_2" {
   # Add a comment to the record
@@ -171,11 +146,6 @@ resource "cloudflare_dns_record" "protonmail_dkim_2" {
 
   # Identifier of the zone to add the record to
   zone_id = cloudflare_zone.main.id
-}
-
-moved {
-  from = cloudflare_record.protonmail_dkim_2
-  to   = cloudflare_dns_record.protonmail_dkim_2
 }
 
 # Add record for DKIM policy for ProtonMail (3)
@@ -202,11 +172,6 @@ resource "cloudflare_dns_record" "protonmail_dkim_3" {
   zone_id = cloudflare_zone.main.id
 }
 
-moved {
-  from = cloudflare_record.protonmail_dkim_3
-  to   = cloudflare_dns_record.protonmail_dkim_3
-}
-
 # Add record for DMARC policy for ProtonMail
 resource "cloudflare_dns_record" "protonmail_dmarc" {
   # Add a comment to the record
@@ -231,11 +196,6 @@ resource "cloudflare_dns_record" "protonmail_dmarc" {
   zone_id = cloudflare_zone.main.id
 }
 
-moved {
-  from = cloudflare_record.protonmail_dmarc
-  to   = cloudflare_dns_record.protonmail_dmarc
-}
-
 # Add record to verify domain ownership for SimpleLogin
 resource "cloudflare_dns_record" "simplelogin_verification" {
   # Add a comment to the record
@@ -258,11 +218,6 @@ resource "cloudflare_dns_record" "simplelogin_verification" {
 
   # Identifier of the zone to add the record to
   zone_id = cloudflare_zone.main.id
-}
-
-moved {
-  from = cloudflare_record.simplelogin_verification
-  to   = cloudflare_dns_record.simplelogin_verification
 }
 
 # Add record for mail server for SimpleLogin (1)
@@ -292,11 +247,6 @@ resource "cloudflare_dns_record" "simplelogin_mail_1" {
   zone_id = cloudflare_zone.main.id
 }
 
-moved {
-  from = cloudflare_record.simplelogin_mail_1
-  to   = cloudflare_dns_record.simplelogin_mail_1
-}
-
 # Add record for mail server for SimpleLogin (2)
 resource "cloudflare_dns_record" "simplelogin_mail_2" {
   # Add a comment to the record
@@ -324,11 +274,6 @@ resource "cloudflare_dns_record" "simplelogin_mail_2" {
   zone_id = cloudflare_zone.main.id
 }
 
-moved {
-  from = cloudflare_record.simplelogin_mail_2
-  to   = cloudflare_dns_record.simplelogin_mail_2
-}
-
 # Add record for SPF policy for SimpleLogin
 resource "cloudflare_dns_record" "simplelogin_spf" {
   # Add a comment to the record
@@ -351,11 +296,6 @@ resource "cloudflare_dns_record" "simplelogin_spf" {
 
   # Identifier of the zone to add the record to
   zone_id = cloudflare_zone.main.id
-}
-
-moved {
-  from = cloudflare_record.simplelogin_spf
-  to   = cloudflare_dns_record.simplelogin_spf
 }
 
 # Add record for DKIM policy for SimpleLogin (1)
@@ -382,11 +322,6 @@ resource "cloudflare_dns_record" "simplelogin_dkim_1" {
   zone_id = cloudflare_zone.main.id
 }
 
-moved {
-  from = cloudflare_record.simplelogin_dkim_1
-  to   = cloudflare_dns_record.simplelogin_dkim_1
-}
-
 # Add record for DKIM policy for SimpleLogin (2)
 resource "cloudflare_dns_record" "simplelogin_dkim_2" {
   # Add a comment to the record
@@ -409,11 +344,6 @@ resource "cloudflare_dns_record" "simplelogin_dkim_2" {
 
   # Identifier of the zone to add the record to
   zone_id = cloudflare_zone.main.id
-}
-
-moved {
-  from = cloudflare_record.simplelogin_dkim_2
-  to   = cloudflare_dns_record.simplelogin_dkim_2
 }
 
 # Add record for DKIM policy for SimpleLogin (3)
@@ -440,11 +370,6 @@ resource "cloudflare_dns_record" "simplelogin_dkim_3" {
   zone_id = cloudflare_zone.main.id
 }
 
-moved {
-  from = cloudflare_record.simplelogin_dkim_3
-  to   = cloudflare_dns_record.simplelogin_dkim_3
-}
-
 # Add record for DMARC policy for SimpleLogin
 resource "cloudflare_dns_record" "simplelogin_dmarc" {
   # Add a comment to the record
@@ -467,11 +392,6 @@ resource "cloudflare_dns_record" "simplelogin_dmarc" {
 
   # Identifier of the zone to add the record to
   zone_id = cloudflare_zone.main.id
-}
-
-moved {
-  from = cloudflare_record.simplelogin_dmarc
-  to   = cloudflare_dns_record.simplelogin_dmarc
 }
 
 # Add record for GitHub Pages verification
@@ -498,11 +418,6 @@ resource "cloudflare_dns_record" "github_pages_verification" {
   zone_id = cloudflare_zone.main.id
 }
 
-moved {
-  from = cloudflare_record.github_pages_verification
-  to   = cloudflare_dns_record.github_pages_verification
-}
-
 # Add record for root domain to point to Cloudflare
 resource "cloudflare_dns_record" "root" {
   # Add a comment to the record
@@ -525,11 +440,6 @@ resource "cloudflare_dns_record" "root" {
 
   # Identifier of the zone to add the record to
   zone_id = cloudflare_zone.main.id
-}
-
-moved {
-  from = cloudflare_record.root
-  to   = cloudflare_dns_record.root
 }
 
 # Add record for demo tunnel
@@ -556,11 +466,6 @@ resource "cloudflare_dns_record" "demo" {
   zone_id = cloudflare_zone.main.id
 }
 
-moved {
-  from = cloudflare_record.demo
-  to   = cloudflare_dns_record.demo
-}
-
 # Add record for Xenon in Tailscale
 resource "cloudflare_dns_record" "xenon" {
   # Add a comment to the record
@@ -583,11 +488,6 @@ resource "cloudflare_dns_record" "xenon" {
 
   # Identifier of the zone to add the record to
   zone_id = cloudflare_zone.main.id
-}
-
-moved {
-  from = cloudflare_record.xenon
-  to   = cloudflare_dns_record.xenon
 }
 
 # Add record for Xenon wildcard in Tailscale
@@ -614,11 +514,6 @@ resource "cloudflare_dns_record" "xenon_wildcard" {
   zone_id = cloudflare_zone.main.id
 }
 
-moved {
-  from = cloudflare_record.xenon_wildcard
-  to   = cloudflare_dns_record.xenon_wildcard
-}
-
 # Add record for Neon in Tailscale
 resource "cloudflare_dns_record" "neon" {
   # Add a comment to the record
@@ -641,11 +536,6 @@ resource "cloudflare_dns_record" "neon" {
 
   # Identifier of the zone to add the record to
   zone_id = cloudflare_zone.main.id
-}
-
-moved {
-  from = cloudflare_record.neon
-  to   = cloudflare_dns_record.neon
 }
 
 # Add record for Neon wildcard in Tailscale
@@ -672,11 +562,6 @@ resource "cloudflare_dns_record" "neon_wildcard" {
   zone_id = cloudflare_zone.main.id
 }
 
-moved {
-  from = cloudflare_record.neon_wildcard
-  to   = cloudflare_dns_record.neon_wildcard
-}
-
 # Add record for Carbon in Tailscale
 resource "cloudflare_dns_record" "carbon" {
   # Add a comment to the record
@@ -699,11 +584,6 @@ resource "cloudflare_dns_record" "carbon" {
 
   # Identifier of the zone to add the record to
   zone_id = cloudflare_zone.main.id
-}
-
-moved {
-  from = cloudflare_record.carbon
-  to   = cloudflare_dns_record.carbon
 }
 
 # Add record for Carbon wildcard in Tailscale
@@ -730,11 +610,6 @@ resource "cloudflare_dns_record" "carbon_wildcard" {
   zone_id = cloudflare_zone.main.id
 }
 
-moved {
-  from = cloudflare_record.carbon_wildcard
-  to   = cloudflare_dns_record.carbon_wildcard
-}
-
 # Add record for Kubernetes
 resource "cloudflare_dns_record" "kubernetes" {
   # Add a comment to the record
@@ -759,11 +634,6 @@ resource "cloudflare_dns_record" "kubernetes" {
   zone_id = cloudflare_zone.main.id
 }
 
-moved {
-  from = cloudflare_record.kubernetes
-  to   = cloudflare_dns_record.kubernetes
-}
-
 # Add record for Kubernetes wildcard
 resource "cloudflare_dns_record" "kubernetes_wildcard" {
   # Add a comment to the record
@@ -786,9 +656,4 @@ resource "cloudflare_dns_record" "kubernetes_wildcard" {
 
   # Identifier of the zone to add the record to
   zone_id = cloudflare_zone.main.id
-}
-
-moved {
-  from = cloudflare_record.kubernetes_wildcard
-  to   = cloudflare_dns_record.kubernetes_wildcard
 }
