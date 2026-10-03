@@ -10,10 +10,10 @@ resource "cloudflare_account_member" "spietras" {
   account_id = cloudflare_account.main.id
 
   # Email address of the member
-  email_address = local.account.members.spietras.email
+  email = local.account.members.spietras.email
 
   # Role IDs to assign to the member
-  role_ids = [
+  roles = [
     local.roles["Super Administrator - All Privileges"],
   ]
 
